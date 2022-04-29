@@ -5,21 +5,16 @@
 * Installing apt-transport-https, curl and gnupg
 [0m
 Get:1 http://security.ubuntu.com/ubuntu focal-security InRelease [114 kB]
-Hit:2 http://ppa.launchpad.net/brightbox/ruby-ng/ubuntu focal InRelease
-Get:3 http://repo.mysql.com/apt/ubuntu bionic InRelease [20.0 kB]
-Hit:4 https://deb.nodesource.com/node_14.x focal InRelease
-Hit:5 http://archive.ubuntu.com/ubuntu focal InRelease
-Get:6 http://archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]
-Get:7 http://archive.ubuntu.com/ubuntu focal-backports InRelease [108 kB]
-Get:8 http://security.ubuntu.com/ubuntu focal-security/restricted amd64 Packages [1,139 kB]
-Get:9 http://security.ubuntu.com/ubuntu focal-security/main amd64 Packages [1,773 kB]
-Get:10 http://security.ubuntu.com/ubuntu focal-security/universe amd64 Packages [870 kB]
-Err:3 http://repo.mysql.com/apt/ubuntu bionic InRelease
+Hit:2 http://archive.ubuntu.com/ubuntu focal InRelease
+Hit:3 http://ppa.launchpad.net/brightbox/ruby-ng/ubuntu focal InRelease
+Ign:4 https://apt.datadoghq.com stable InRelease
+Get:5 http://repo.mysql.com/apt/ubuntu bionic InRelease [20.0 kB]
+Hit:6 https://apt.datadoghq.com stable Release
+Get:7 http://archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]
+Hit:8 https://deb.nodesource.com/node_14.x focal InRelease
+Get:9 http://archive.ubuntu.com/ubuntu focal-backports InRelease [108 kB]
+Err:5 http://repo.mysql.com/apt/ubuntu bionic InRelease
   The following signatures couldn't be verified because the public key is not available: NO_PUBKEY 467B942D3A79BD29
-Get:11 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 Packages [1,155 kB]
-Get:12 http://archive.ubuntu.com/ubuntu focal-updates/restricted amd64 Packages [1,216 kB]
-Get:13 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages [2,192 kB]
-Get:14 http://archive.ubuntu.com/ubuntu focal-backports/universe amd64 Packages [26.0 kB]
 Reading package lists...
 W: GPG error: http://repo.mysql.com/apt/ubuntu bionic InRelease: The following signatures couldn't be verified because the public key is not available: NO_PUBKEY 467B942D3A79BD29
 E: The repository 'http://repo.mysql.com/apt/ubuntu bionic InRelease' is not signed.
@@ -29,43 +24,29 @@ Building dependency tree...
 Reading state information...
 curl is already the newest version (7.68.0-1ubuntu2.7).
 gnupg is already the newest version (2.2.19-3ubuntu2.1).
-gnupg set to manually installed.
+apt-transport-https is already the newest version (2.0.6).
 The following package was automatically installed and is no longer required:
   libc-ares2
 Use 'apt autoremove' to remove it.
-The following NEW packages will be installed:
-  apt-transport-https
-0 upgraded, 1 newly installed, 0 to remove and 122 not upgraded.
-Need to get 4,680 B of archives.
-After this operation, 162 kB of additional disk space will be used.
-Get:1 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 apt-transport-https all 2.0.6 [4,680 B]
-debconf: delaying package configuration, since apt-utils is not installed
-Fetched 4,680 B in 0s (36.0 kB/s)
-Selecting previously unselected package apt-transport-https.
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 83976 files and directories currently installed.)
-Preparing to unpack .../apt-transport-https_2.0.6_all.deb ...
-Unpacking apt-transport-https (2.0.6) ...
-Setting up apt-transport-https (2.0.6) ...
+0 upgraded, 0 newly installed, 0 to remove and 122 not upgraded.
 [34m
 * Installing APT package sources for Datadog
 [0m
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  9001  100  9001    0     0  85723      0 --:--:-- --:--:-- --:--:-- 85723
-gpg: directory '/root/.gnupg' created
-gpg: /root/.gnupg/trustdb.gpg: trustdb created
-gpg: key D3A80E30382E94DE: public key "Datadog, Inc <package@datadoghq.com>" imported
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  9001  100  9001    0     0  46637      0 --:--:-- --:--:-- --:--:-- 87388
+gpg: key D3A80E30382E94DE: "Datadog, Inc <package@datadoghq.com>" not changed
 gpg: Total number processed: 1
-gpg:               imported: 1
+gpg:              unchanged: 1
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  6226  100  6226    0     0  59295      0 --:--:-- --:--:-- --:--:-- 59295
-gpg: key 32637D44F14F620E: public key "Datadog, Inc. Master key (2020-09-08) <package+masterkey@datadoghq.com>" imported
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  6226  100  6226    0     0  30223      0 --:--:-- --:--:-- --:--:-- 30077
+gpg: key 32637D44F14F620E: "Datadog, Inc. Master key (2020-09-08) <package+masterkey@datadoghq.com>" not changed
 gpg: Total number processed: 1
-gpg:               imported: 1
+gpg:              unchanged: 1
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  9001  100  9001    0     0  85723      0 --:--:-- --:--:-- --:--:-- 85723
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  9001  100  9001    0     0  86548      0 --:--:-- --:--:-- --:--:-- 86548
 gpg: key D3A80E30382E94DE: "Datadog, Inc <package@datadoghq.com>" not changed
 gpg: Total number processed: 1
 gpg:              unchanged: 1
@@ -73,53 +54,22 @@ gpg:              unchanged: 1
 * Installing the Datadog Agent package
 [0m
 Ign:1 https://apt.datadoghq.com stable InRelease
-Get:2 https://apt.datadoghq.com stable Release [9,927 B]
-Get:3 https://apt.datadoghq.com stable Release.gpg [801 B]
-Get:4 https://apt.datadoghq.com stable/7 all Packages [852 B]
-Get:5 https://apt.datadoghq.com stable/7 amd64 Packages [19.8 kB]
-Fetched 31.4 kB in 1s (34.8 kB/s)
+Hit:2 https://apt.datadoghq.com stable Release
 Reading package lists...
   [33mInstalling package: datadog-agent
 [0m
 Reading package lists...
 Building dependency tree...
 Reading state information...
+datadog-signing-keys is already the newest version (1:1.1.0-1).
+datadog-agent is already the newest version (1:7.35.1-1).
 The following package was automatically installed and is no longer required:
   libc-ares2
 Use 'apt autoremove' to remove it.
-The following NEW packages will be installed:
-  datadog-agent datadog-signing-keys
-0 upgraded, 2 newly installed, 0 to remove and 122 not upgraded.
-Need to get 255 MB of archives.
-After this operation, 848 MB of additional disk space will be used.
-Get:1 https://apt.datadoghq.com stable/7 amd64 datadog-agent amd64 1:7.35.1-1 [255 MB]
-Get:2 https://apt.datadoghq.com stable/7 amd64 datadog-signing-keys all 1:1.1.0-1 [20.8 kB]
-debconf: delaying package configuration, since apt-utils is not installed
-Fetched 255 MB in 24s (10.5 MB/s)
-Selecting previously unselected package datadog-agent.
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 83980 files and directories currently installed.)
-Preparing to unpack .../datadog-agent_1%3a7.35.1-1_amd64.deb ...
-Unpacking datadog-agent (1:7.35.1-1) ...
-Selecting previously unselected package datadog-signing-keys.
-Preparing to unpack .../datadog-signing-keys_1%3a1.1.0-1_all.deb ...
-Unpacking datadog-signing-keys (1:1.1.0-1) ...
-Setting up datadog-agent (1:7.35.1-1) ...
-Creating dd-agent group
-Creating dd-agent user
-Enabling service datadog-agent
-Created symlink /etc/systemd/system/multi-user.target.wants/datadog-agent.service → /lib/systemd/system/datadog-agent.service.
-Created symlink /etc/systemd/system/multi-user.target.wants/datadog-agent-process.service → /lib/systemd/system/datadog-agent-process.service.
-Created symlink /etc/systemd/system/multi-user.target.wants/datadog-agent-trace.service → /lib/systemd/system/datadog-agent-trace.service.
-Created symlink /etc/systemd/system/multi-user.target.wants/datadog-agent-security.service → /lib/systemd/system/datadog-agent-security.service.
-No datadog.yaml file detected, not starting the agent
-Setting up datadog-signing-keys (1:1.1.0-1) ...
-Processing triggers for systemd (245.4-4ubuntu3.13) ...
+0 upgraded, 0 newly installed, 0 to remove and 122 not upgraded.
 W: --force-yes is deprecated, use one of the options starting with --allow instead.
 [34m
-* Adding your API key to the Datadog Agent configuration: /etc/datadog-agent/datadog.yaml
-[0m
-[34m
-* Setting SITE in the Datadog Agent configuration: /etc/datadog-agent/datadog.yaml
+* Keeping old /etc/datadog-agent/datadog.yaml configuration file
 [0m
 [34m* Starting the Datadog Agent...
 [0m
@@ -140,13 +90,7 @@ Troubleshooting and basic usage information for the Datadog Agent are available 
 
     https://docs.datadoghq.com/agent/basic_agent_usage/
 [0m
-Do you want to send a failure report to Datadog (including ddagent-install.log)? (y/[n]) Enter an email address so we can follow up: [33m(1/3) Email address invalid: n[0m
-
-Enter an email address so we can follow up: [33m(2/3) Email address invalid: [0m
-
-Enter an email address so we can follow up: [33m(3/3) Email address invalid: [0m
-
-
+Do you want to send a failure report to Datadog (including ddagent-install.log)? (y/[n]) 
 If you are still having problems, please send an email to support@datadoghq.com
 with the contents of ddagent-install.log and any information you think would be
 useful and we will do our very best to help you solve your problem.
